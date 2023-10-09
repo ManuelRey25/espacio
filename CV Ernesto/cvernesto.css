@@ -1,0 +1,156 @@
+/*Estilos a aplicar a pagina CV de Ernesto*/
+
+body {
+  font-family: 'Open Sans', sans-serif;
+  padding: 0 27px;
+  background-color: #2E2E2E;
+  color: #E5E5E5;
+  margin: 0px;
+  background: linear-gradient(to right, #2E2E2E, #830202);
+}
+
+.botonEmail {
+    display: inline-block;
+    padding: 8px 12px;
+    background-color: #57249a;
+    color: white;
+    text-decoration: none;
+    border-radius: 2px;
+    background: linear-gradient(to right, #522ad5, #7e6ee5);
+  }
+  
+  .info-personal {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: -30px;
+    text-align: left;
+  }
+
+  .info-personal img {
+    width: 165px;
+    height: auto;
+    border-radius: 100%;
+    border: solid 2px #555555;
+    margin-left: 140px;
+    margin-top: 30px;
+    margin-bottom: 0px;
+    transition: all 0.8s ease-in-out;
+    float: left;
+  }
+
+  .info-personal img:hover{
+    transform: scale(1.05);
+  }
+  .info-personal .info {
+    text-align: center;
+    margin-top: 10px;
+  }
+  
+  .info-personal .info p {
+    font-size: 18px;
+    margin: 0;
+  }
+
+  .titulo {
+    text-align: center;
+    margin: 12px;
+    font-size: 30px;
+    font-weight: bolder;
+    text-decoration: underline;
+    font-style: italic;
+    font-family: 'Playfair Display';
+    transition: opacity 0.5s ease-out;
+    opacity: 0.55;
+  }
+
+ 
+  .titulo:hover {
+    opacity: 1.5;
+  }
+  
+  @font-face {
+    font-family: 'Playfair Display';
+    src: url("fonts/PlayfairDisplay-Italic-VariableFont_wght.ttf") format('truetype');
+    font-style: italic;
+  }
+
+
+  .habilidades {
+    text-align: center;
+    background-color: #2E2E2E;
+    padding: 10px;
+    border-radius: 52px;
+    margin: 27px auto;
+    box-shadow: 0 0 20px #828282;
+    transition: all 0.5s ease-in-out;
+    width: 92%;
+    animation: myAnimation 3.5s ease-in-out;
+  }
+  
+  @keyframes myAnimation {
+    0% {
+      transform: scale(0.1);
+      background-color: #c1c1c1;
+    }
+    50% {
+      transform: scale(1.03);
+      background-color: #4b4b4b;
+    }
+    100% {
+      transform: scale(1);
+      background-color: #2E2E2E;
+    }
+  }
+  
+  .habilidades:hover {
+    animation-play-state:running;
+  }
+  .habilidades:hover {
+    transform: scale(1.03);
+  }
+
+  section {
+    margin: 20px 0;
+    text-align: center;
+  }
+  
+  section h3 {
+  font-size: 20px;
+  }
+  
+  section ul {
+  list-style:none;
+  text-align: center;
+  margin: 0 auto;
+  padding: 0;
+  width: 80%;
+  }
+  
+  section li {
+  font-size: 18px;
+  margin-bottom: 10px;
+  }
+
+  footer {
+    background-color: #2E2E2E;
+    color: #FFFFFF;
+    text-align: center;
+    padding: 5px;
+    position:static;
+    bottom: 0;
+    width: 100%;
+    background: linear-gradient(to right, #2E2E2E, #606060);
+  }
+  
+  .volver {
+    display: block;
+    margin: 30px auto;
+    text-align: center;
+    color: white;
+    text-decoration: none;
+    font-size: 18px;
+    font-style: italic;
+    font-family: 'cursive';
+  }
+  
