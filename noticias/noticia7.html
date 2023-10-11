@@ -1,19 +1,19 @@
 <!DOCTYPE html>
 <html>
-    <script>
-        // Verificar si el contador de visitas existe en el almacenamiento local
-        if (!localStorage.getItem('not7')) {
-            localStorage.setItem('not7', 0);
-        }
-        
-        // Incrementar el contador de visitas al cargar la página
-        window.onload = function() {
-            var not7 = parseInt(localStorage.getItem('not7'));
-            not7++;
-            localStorage.setItem('not7', not7);
-            document.getElementById('n7').innerText = not7;
-        };
-        </script>
+<script>
+    // Verificar si el contador de visitas existe en el almacenamiento local
+    if (!localStorage.getItem('not7')) {
+        localStorage.setItem('not7', 0);
+    }
+
+    // Incrementar el contador de visitas al cargar la página
+    window.onload = function() {
+        var not7 = parseInt(localStorage.getItem('not7'));
+        not7++;
+        localStorage.setItem('not7', not7);
+        document.getElementById('n7').innerText = not7;
+    };
+</script>
 <head>
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">

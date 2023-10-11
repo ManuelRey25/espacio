@@ -5,7 +5,11 @@ padding: 0;
 background-color: #000000;
 font-family: Verdana, 'Lucida Grande';
 text-align: center;
+font-size: 16px;
 }
+
+
+
 /* MENU */
 #menu ul, #menu li, #menu a {margin: 0;padding: 0;}
 #menu ul {list-style: none;}
@@ -310,7 +314,7 @@ header {
 }
 
 .text-stars::after {
-    left: 800px; /* Posición de la segunda estrella */
+    left: 975px; /* Posición de la segunda estrella */
     animation-delay: 2s; /* Retraso de animación para la segunda estrella */
 }
 
@@ -862,4 +866,139 @@ header {
 
 .boton-comprar:hover {
   background-color: #0056b3;
+}
+
+
+
+.botonapi {
+  background-color: white; /* Color de fondo blanco */
+  color: black; /* Color del texto negro por defecto */
+  border: none; /* Eliminamos el borde */
+  border-radius: 20px; /* Bordes redondeados */
+  margin-top: 10px; /* Margen superior agregado */
+  margin-bottom: 10px;
+  font-size: 18px;
+  font-style: italic;
+  font-family: 'cursive';
+  padding: 10px 20px; /* Espaciado interno para el botón */
+  box-shadow: 0 0 10px rgba(255, 255, 255, 0.5); /* Sombra de color blanco */
+}
+
+.botonapi:hover {
+  background-color: black; /* Cambiar el color de fondo al pasar el ratón */
+  color: white; /* Cambiar el color del texto al pasar el ratón */
+}
+
+.texto-blanco {
+  color: white; /* Color del texto en blanco */
+}
+
+#dataContainer {
+  color: white; /* Color de texto en blanco */
+  background-color: black; /* Color de fondo negro */
+  padding: 10px; /* Espaciado interno */
+}
+
+
+
+@media (max-width: 767px) {
+  body {
+    font-size: 14px; /* Tamaño de fuente más pequeño para celulares */
+  }
+
+  /* Ajustes para el menú en dispositivos móviles */
+  #menu {
+    height: auto;
+    background-color: rgba(247, 245, 245, 0.6);
+  }
+
+  #menu:hover {
+    transform: none; /* Eliminar la escala en el hover en celulares */
+  }
+
+  /* Ajustar el tamaño de fuente y el espaciado de otros elementos según sea necesario */
+  #menu > ul > li > a {
+    font-size: 16px; /* Ajustar el tamaño de fuente */
+    padding: 10px 16px; /* Ajustar el espaciado */
+  }
+
+  .h1header {
+    font-size: 28px; /* Reducir el tamaño del encabezado */
+  }
+
+  /* Cambiar la disposición de las columnas o elementos si es necesario */
+  .noticiasfront {
+    flex-direction: column; /* Cambiar la disposición de columnas a vertical */
+  }
+
+  /* Ajustar el espaciado entre elementos */
+  .noticiasfront-container {
+    gap: 10px;
+  }
+
+  /* Cambiar el ancho de elementos o columnas si es necesario */
+  .noticiafront {
+    width: 100%; /* Ocupar todo el ancho disponible */
+  }
+
+  /* Agregar más ajustes específicos para dispositivos móviles según sea necesario */
+}
+
+
+
+
+.twitterclass {
+  margin: 0 auto; /* Centrar horizontalmente */
+  background-color: #000000; /* Color de fondo del contenedor */
+  border: 1px solid #ccc; /* Borde del contenedor */
+  border-radius: 5px; /* Bordes redondeados */
+  padding: 20px; /* Espaciado interno del contenedor */
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.2); /* Sombra del contenedor */
+  max-width: 975px; /* Ancho máximo del contenedor */
+}
+.h1t {
+  color: white; /* Color del texto en blanco */
+  font-style: italic; /* Texto en estilo itálico */
+  font-weight: normal; /* Evita que el texto esté en negrita */
+}
+
+
+
+/* Estilo para el contenedor de datos meteorológicos */
+#weatherData {
+  color: white; /* Color del texto en blanco */
+  background-color: black; /* Color de fondo negro */
+  padding: 10px; /* Espaciado interno */
+}
+
+
+
+
+
+
+
+
+
+/* Estilos para el contenedor de donaciones */
+.donation-container {
+  display: flex; /* Utilizar Flexbox para alinear los elementos en fila */
+  justify-content: space-between; /* Distribuir los elementos de manera uniforme */
+}
+
+/* Estilos para cada caja de donación */
+.donation-box {
+  width: calc(33.33% - 20px); /* Ancho para cada caja (1/3 de la pantalla) */
+  margin-right: 20px; /* Espacio entre las cajas */
+  padding: 20px;
+  text-align: center;
+  background-color: #f9f9f9;
+  border-radius: 10px; /* Redondear las esquinas */
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); /* Agregar sombreado */
+  margin-top: 20px; /* Margen superior para separar de la imagen superior */
+}
+
+/* Estilos para la imagen del logo de donación */
+.logo-donation {
+  max-width: 100px; /* Ancho máximo de la imagen del logo */
+  margin: 0 auto 10px; /* Centrar la imagen y agregar espacio debajo */
 }
