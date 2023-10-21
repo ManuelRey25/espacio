@@ -8,7 +8,207 @@ text-align: center;
 font-size: 16px;
 }
 
+/*HEADER*/
 
+header {
+  background-color: #000000;
+  border-bottom: 1px solid #444;
+  border-radius: 0 0 10px 10px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  z-index: 1000; 
+}
+
+/* IMAGEN HEADER QUE YA NO ES HEADER*/
+
+.imagenheader {
+  background-image: url('img/space-background.jpg');
+  background-size: cover;
+  background-position: center;
+  color: #000000;
+  padding: 80px 0;
+  text-align: center;
+  position: relative;
+  width: 100%; 
+  left: 0; 
+}
+.h1header {
+    font-size: 38px; 
+    color: #360206;
+    margin: 0;
+    display: block;
+    float: none;
+    position: absolute;
+    top: 40%; 
+    left: 50%;
+    transform: translate(-50%, -50%);
+    font-style: italic; 
+    font-family: 'cursive'; 
+}
+
+.pheader {
+  font-size: 17px;
+  color: #ffffff;
+  margin: 0;
+  display: block;
+  float: none;
+  position: absolute;
+  top: 63%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  font-style: italic;
+  font-family: 'Arial', sans-serif;
+  opacity: 0; 
+  animation: fadeIn 3s ease-in-out infinite; 
+}
+
+@keyframes fadeIn {
+  from {
+      opacity: 0;
+  }
+  to {
+      opacity: 1;
+  }
+}
+
+/* CARRUCEL*/
+
+#slider {
+  margin: 15px auto;
+  width: 90%;
+  height: 400px;
+  overflow: hidden;
+  background-color: black;
+  position: relative;
+}
+
+.slide {
+  width: 100%;
+  height: 100%;
+  display: none;
+  position: absolute;
+}
+
+.slide a {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  height: 100%;
+  text-align: center;
+  text-decoration: none;
+  color: white;
+  position: relative;
+}
+
+.slide img {
+  width: 90%; 
+  max-height: 100%;
+  vertical-align: middle;
+}
+
+.slide-content {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  font-size: 18px;
+  font-style: italic; 
+  font-family: 'cursive'; 
+}
+
+.slideh1 {
+  font-size: 45px;
+  font-style: italic;
+  font-family: 'cursive'; 
+  margin: 7px;
+  color: rgb(255, 255, 255);
+}
+
+.slidep {
+  margin: 10px;
+}
+
+.slide-buttons {
+  text-align: center;
+  margin-top: 10px;
+}
+
+/* H NOTICIAS DESTACADAS */
+.hnoticias {
+  font-size: 31px;
+  font-style: italic;
+  font-family: 'cursive';
+  text-decoration: underline;
+  text-align: center;
+  color: white;
+  padding: 0 0 17px 0;
+}
+
+.hnoticias:hover {
+  animation: colorCycle 0.3s infinite;
+}
+
+@keyframes colorCycle {
+  0%, 100% {
+      color: white; 
+  }
+  50% {
+      color: #000000; 
+  }
+}
+
+/* H VIDEOS DE LA SEMANA*/
+.text-stars {
+  font-size: 31px;
+  font-style: italic; 
+  font-family: 'cursive'; 
+  text-decoration: underline;
+  text-align: center;
+  position: relative;
+  display: inline-block;
+  width: 80%; 
+  margin: 0 auto; 
+  color: white;
+  padding: 0 0 40px 0;
+}
+.text-stars::before,
+.text-stars::after {
+    content: "★★★"; 
+    position: absolute;
+    top: 0;
+    opacity: 0; 
+    animation: stars 5s linear infinite; 
+}
+
+.text-stars::before {
+    left: 170px; 
+    animation-delay: 1s; 
+}
+
+.text-stars::after {
+    left: 975px; 
+    animation-delay: 2s; 
+}
+
+/* Animación de estrellas */
+@keyframes stars {
+    0% {
+        opacity: 0; 
+        transform: translateY(0); 
+    }
+    20% {
+        opacity: 1; 
+    }
+    100% {
+        opacity: 0; 
+        transform: translateY(-20px); 
+    }
+}
 
 /* MENU */
 #menu ul, #menu li, #menu a {margin: 0;padding: 0;}
@@ -22,10 +222,10 @@ font-size: 16px;
   top: 0;
   left: 0;
   width: 100%;
-  transition: transform 0.3s; /* Agregamos una transición para suavizar el efecto */
+  transition: transform 0.3s; 
 }
 #menu:hover {
-  transform: scale(1.02); /* Escalamos el menú al 105% del tamaño original en el hover */
+  transform: scale(1.02); 
 }
 
 #menu > ul > li {
@@ -131,209 +331,6 @@ font-size: 16px;
   background-color: #0087db;
   color: #f0f0f0;
 }
-/*HEADER*/
-
-header {
-  background-color: #000000;
-  border-bottom: 1px solid #444;
-  border-radius: 0 0 10px 10px;
-  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
-  position: fixed;
-  top: 0;
-  left: 0;
-  width: 100%;
-  z-index: 1000; /* Asegura que el menú quede encima del contenido */
-}
-
-/* IMAGEN HEADER QUE YA NO ES HEADER*/
-
-.imagenheader {
-  background-image: url('img/space-background.jpg');
-  background-size: cover;
-  background-position: center;
-  color: #000000;
-  padding: 80px 0;
-  text-align: center;
-  position: relative;
-  width: 100%; /* Ajustar el ancho al 100% */
-  left: 0; /* Asegurarse de que esté alineado a la izquierda */
-}
-.h1header {
-    font-size: 38px; /* Tamaño de letra mayor */
-    color: #360206;
-    margin: 0;
-    display: block;
-    float: none;
-    position: absolute;
-    top: 40%; /* Ajustado */
-    left: 50%;
-    transform: translate(-50%, -50%);
-    font-style: italic; /* En cursiva */
-    font-family: 'cursive'; /* Fuente bonita */
-}
-
-.pheader {
-  font-size: 17px;
-  color: #ffffff;
-  margin: 0;
-  display: block;
-  float: none;
-  position: absolute;
-  top: 63%;
-  left: 50%;
-  transform: translate(-50%, -50%);
-  font-style: italic;
-  font-family: 'Arial', sans-serif;
-  opacity: 0; /* Empieza invisible */
-  animation: fadeIn 3s ease-in-out infinite; /* Aplica la animación */
-}
-
-@keyframes fadeIn {
-  from {
-      opacity: 0;
-  }
-  to {
-      opacity: 1;
-  }
-}
-
-/* CARRUCEL*/
-
-#slider {
-  margin: 15px auto;
-  width: 90%;
-  height: 400px;
-  overflow: hidden;
-  background-color: black;
-  position: relative;
-}
-
-.slide {
-  width: 100%;
-  height: 100%;
-  display: none;
-  position: absolute;
-}
-
-.slide a {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  width: 100%;
-  height: 100%;
-  text-align: center;
-  text-decoration: none;
-  color: white;
-  position: relative;
-}
-
-.slide img {
-  width: 90%; /* Ajustar el ancho al 90% de la pantalla */
-  max-height: 100%;
-  vertical-align: middle;
-}
-
-.slide-content {
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
-  font-size: 18px;
-  font-style: italic; /* En cursiva */
-  font-family: 'cursive'; /* Fuente bonita */
-}
-
-.slideh1 {
-  font-size: 45px;
-  font-style: italic; /* En cursiva */
-  font-family: 'cursive'; /* Fuente bonita */
-  margin: 7px;
-  color: rgb(255, 255, 255);
-}
-
-.slidep {
-  margin: 10px;
-}
-
-.slide-buttons {
-  text-align: center;
-  margin-top: 10px;
-}
-
-/* H NOTICIAS DESTACADAS */
-.hnoticias {
-  font-size: 31px;
-  font-style: italic;
-  font-family: 'cursive';
-  text-decoration: underline;
-  text-align: center;
-  color: white;
-  padding: 0 0 17px 0;
-}
-
-.hnoticias:hover {
-  animation: colorCycle 0.3s infinite; /* Animación de cambio de color al pasar el mouse */
-}
-
-@keyframes colorCycle {
-  0%, 100% {
-      color: white; /* Comienza con color blanco */
-  }
-  50% {
-      color: #000000; /* Cambia a color bordo a la mitad de la animación */
-  }
-}
-
-/* H VIDEOS DE LA SEMANA*/
-.text-stars {
-  font-size: 31px;
-  font-style: italic; /* En cursiva */
-  font-family: 'cursive'; /* Fuente bonita */
-  text-decoration: underline;
-  text-align: center;
-  position: relative;
-  display: inline-block;
-  width: 80%; /* Ancho del elemento */
-  margin: 0 auto; /* Centra horizontalmente */
-  color: white;
-  padding: 0 0 40px 0;
-}
-.text-stars::before,
-.text-stars::after {
-    content: "★★★"; /* Caracter de estrella */
-    position: absolute;
-    top: 0;
-    opacity: 0; /* Comienza invisible */
-    animation: stars 5s linear infinite; /* Animación de estrellas */
-}
-
-.text-stars::before {
-    left: 170px; /* Posición de la primera estrella */
-    animation-delay: 1s; /* Retraso de animación para la primera estrella */
-}
-
-.text-stars::after {
-    left: 975px; /* Posición de la segunda estrella */
-    animation-delay: 2s; /* Retraso de animación para la segunda estrella */
-}
-
-/* Animación de estrellas */
-@keyframes stars {
-    0% {
-        opacity: 0; /* Invisible al inicio */
-        transform: translateY(0); /* Posición inicial */
-    }
-    20% {
-        opacity: 1; /* Se vuelve visible */
-    }
-    100% {
-        opacity: 0; /* Vuelve a ser invisible */
-        transform: translateY(-20px); /* Sube para desaparecer */
-    }
-}
-
-
 
 /* ESTILOS PARA LOS VIDEOS */
 .videos-section {
@@ -360,8 +357,8 @@ header {
 }
 
 .videos-container iframe {
-    width: 320px; /* Ancho de los videos */
-    height: 222px; /* Alto de los videos */
+    width: 320px; 
+    height: 222px; 
 }
 /* Estilos para la Sección de Noticias */
 .noticias-section {
@@ -380,7 +377,7 @@ header {
 }
 
 .noticia {
-  width: 300px; /* Ancho del recuadro de noticia */
+  width: 300px; 
   background-color: #222222;
   border: 1px solid rgb(255, 251, 0);
   border-radius: 5px;
@@ -389,12 +386,12 @@ header {
 }
 
 .noticia:hover {
-  transform: scale(1.05); /* Agrandar al pasar el mouse */
+  transform: scale(1.05); 
 }
 
 .noticia a {
-  text-decoration: none; /* Eliminar subrayado de los enlaces */
-  color: inherit; /* Heredar el color del contenedor padre */
+  text-decoration: none; 
+  color: inherit;
 }
 
 .noticia img {
@@ -425,7 +422,7 @@ header {
 
 
 .solar {
-  width: 300px; /* Ancho del recuadro de noticia */
+  width: 300px; 
   background-color: #222222;
   border: 1px solid rgb(47, 0, 255);
   border-radius: 5px;
@@ -434,12 +431,12 @@ header {
 }
 
 .solar:hover {
-  transform: scale(1.05); /* Agrandar al pasar el mouse */
+  transform: scale(1.05); 
 }
 
 .solar a {
-  text-decoration: none; /* Eliminar subrayado de los enlaces */
-  color: inherit; /* Heredar el color del contenedor padre */
+  text-decoration: none;
+  color: inherit; 
 }
 
 .solar img {
@@ -504,18 +501,18 @@ header {
 /* Estilos para el Footer */
 .site-footer {
   color: white;
-  background: linear-gradient(to right, black, rgb(12, 11, 11)); /* Fondo degradado de izquierda a derecha */
-  background-size: 200% 100%; /* Tamaño del fondo degradado */
-  animation: gradientAnimation 4s linear infinite; /* Animación de ciclo infinito */
+  background: linear-gradient(to right, black, rgb(12, 11, 11)); 
+  background-size: 200% 100%; 
+  animation: gradientAnimation 4s linear infinite; 
   text-align: left;
 }
 
 @keyframes gradientAnimation {
   0% {
-      background-position: 0 0; /* Comienza desde la izquierda */
+      background-position: 0 0; 
   }
   100% {
-      background-position: 100% 0; /* Llega a la derecha */
+      background-position: 100% 0; 
   }
 }
 
@@ -561,7 +558,7 @@ header {
 
 /* Estilos para los íconos */
 .category-list img {
-  width: 55px; /* Ajusta el tamaño según sea necesario */
+  width: 55px; 
   margin-right: 5px;
 }
 
@@ -574,7 +571,7 @@ header {
 }
 
 .category-list a:hover {
-  color: #007BFF; /* Cambia el color al pasar el mouse */
+  color: #007BFF; 
 }
 
 
@@ -680,7 +677,7 @@ header {
 .noticiasfront {
   display: flex;
   justify-content: space-between;
-  background-color: rgba(0, 0, 0, 0.7); /* Fondo negro con mayor transparencia */
+  background-color: rgba(0, 0, 0, 0.7); 
   padding: 50px 20px 50px 50px;
   
   float: left;
@@ -691,21 +688,21 @@ header {
   display: grid;
   grid-template-columns: repeat(2, 1fr);
   gap: 20px;
-  width: 65%; /* Ancho del contenedor de noticias */
+  width: 65%; 
 }
 
 .noticiafront {
   float: left;
-  background-color: rgba(0, 0, 0, 0.2); /* Fondo blanco con transparencia */
+  background-color: rgba(0, 0, 0, 0.2); 
   border-radius: 25px;
   overflow: hidden;
   transition: transform 0.2s;
   
-  flex-direction: column; /* Alineación de los elementos en columna */
+  flex-direction: column; 
 }
 
 .noticiafront:hover {
-  transform: scale(1.05); /* Agrandar al pasar el mouse */
+  transform: scale(1.05); 
 }
 
 .noticiafront a {
@@ -728,7 +725,7 @@ header {
 }
 
 .noticiafront-title {
-  font-size: 18px; /* Tamaño de fuente mayor */
+  font-size: 18px; 
   font-weight: bold;
   margin: 5px 0;
   color: white;
@@ -740,14 +737,14 @@ header {
 }
 
 .advertising-aside {
-  width: 24%; /* Ancho del aside */
+  width: 24%; 
   background: linear-gradient(to right, rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.8)); /* Degradado de gris a negro */
   padding: 10px;
   border-radius: 25px;
   box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.2);
-  position: sticky; /* Mantener fijo mientras se desplaza */
-  top: 100px; /* Ajustar distancia desde la parte superior */
-  color: white; /* Cambiar el color del texto para mayor legibilidad */
+  position: sticky; 
+  top: 100px; 
+  color: white; 
 }
 
 .advertising-aside img {
@@ -756,14 +753,14 @@ header {
 }
 
 .advertising-aside2 {
-  width: 20%; /* Ancho del aside */
+  width: 20%; 
   background: linear-gradient(to right, rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.8)); /* Degradado de gris a negro */
   padding: 10px;
   border-radius: 25px;
   box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.2);
-  position: sticky; /* Mantener fijo mientras se desplaza */
-  top: 100px; /* Ajustar distancia desde la parte superior */
-  color: white; /* Cambiar el color del texto para mayor legibilidad */
+  position: sticky; 
+  top: 100px; 
+  color: white; 
   float: right;
 }
 
@@ -871,32 +868,32 @@ header {
 
 
 .botonapi {
-  background-color: white; /* Color de fondo blanco */
-  color: black; /* Color del texto negro por defecto */
-  border: none; /* Eliminamos el borde */
-  border-radius: 20px; /* Bordes redondeados */
-  margin-top: 10px; /* Margen superior agregado */
+  background-color: white; 
+  color: black; 
+  border: none; 
+  border-radius: 20px; 
+  margin-top: 10px; 
   margin-bottom: 10px;
   font-size: 18px;
   font-style: italic;
   font-family: 'cursive';
-  padding: 10px 20px; /* Espaciado interno para el botón */
-  box-shadow: 0 0 10px rgba(255, 255, 255, 0.5); /* Sombra de color blanco */
+  padding: 10px 20px; 
+  box-shadow: 0 0 10px rgba(255, 255, 255, 0.5); 
 }
 
 .botonapi:hover {
-  background-color: black; /* Cambiar el color de fondo al pasar el ratón */
-  color: white; /* Cambiar el color del texto al pasar el ratón */
+  background-color: black; 
+  color: white; 
 }
 
 .texto-blanco {
-  color: white; /* Color del texto en blanco */
+  color: white; 
 }
 
 #dataContainer {
-  color: white; /* Color de texto en blanco */
-  background-color: black; /* Color de fondo negro */
-  padding: 10px; /* Espaciado interno */
+  color: white; 
+  background-color: black; 
+  padding: 10px; 
 }
 
 
@@ -948,27 +945,27 @@ header {
 
 
 .twitterclass {
-  margin: 0 auto; /* Centrar horizontalmente */
-  background-color: #000000; /* Color de fondo del contenedor */
-  border: 1px solid #ccc; /* Borde del contenedor */
-  border-radius: 5px; /* Bordes redondeados */
-  padding: 20px; /* Espaciado interno del contenedor */
-  box-shadow: 0 0 10px rgba(0, 0, 0, 0.2); /* Sombra del contenedor */
-  max-width: 975px; /* Ancho máximo del contenedor */
+  margin: 0 auto; 
+  background-color: #000000; 
+  border: 1px solid #ccc; 
+  border-radius: 5px; 
+  padding: 20px; 
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.2); 
+  max-width: 975px;
 }
 .h1t {
-  color: white; /* Color del texto en blanco */
-  font-style: italic; /* Texto en estilo itálico */
-  font-weight: normal; /* Evita que el texto esté en negrita */
+  color: white; 
+  font-style: italic; 
+  font-weight: normal; 
 }
 
 
 
 /* Estilo para el contenedor de datos meteorológicos */
 #weatherData {
-  color: white; /* Color del texto en blanco */
-  background-color: black; /* Color de fondo negro */
-  padding: 10px; /* Espaciado interno */
+  color: white; 
+  background-color: black; 
+  padding: 10px; 
 }
 
 
@@ -981,24 +978,54 @@ header {
 
 /* Estilos para el contenedor de donaciones */
 .donation-container {
-  display: flex; /* Utilizar Flexbox para alinear los elementos en fila */
-  justify-content: space-between; /* Distribuir los elementos de manera uniforme */
+  display: flex; 
+  justify-content: space-between; 
 }
 
 /* Estilos para cada caja de donación */
 .donation-box {
-  width: calc(33.33% - 20px); /* Ancho para cada caja (1/3 de la pantalla) */
-  margin-right: 20px; /* Espacio entre las cajas */
+  width: calc(33.33% - 20px); 
+  margin-right: 20px; 
   padding: 20px;
   text-align: center;
   background-color: #f9f9f9;
-  border-radius: 10px; /* Redondear las esquinas */
-  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); /* Agregar sombreado */
-  margin-top: 20px; /* Margen superior para separar de la imagen superior */
+  border-radius: 10px; 
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); 
+  margin-top: 20px; 
 }
 
 /* Estilos para la imagen del logo de donación */
 .logo-donation {
-  max-width: 100px; /* Ancho máximo de la imagen del logo */
-  margin: 0 auto 10px; /* Centrar la imagen y agregar espacio debajo */
+  max-width: 100px; 
+  margin: 0 auto 10px; 
+}
+
+
+
+
+
+#countryInfo {
+  background-color: #000000; 
+  
+  border-radius: 5px;
+  padding: 20px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+  max-width: 400px;
+  margin: 0 auto; 
+  color:rgb(90, 0, 48);
+  margin-top: 6px;
+}
+
+.white-text {
+  color: white; 
+}
+
+.h1t {
+  font-style: italic; 
+  color: white; 
+}
+
+.h2t {
+  font-style: italic; 
+  color: white; 
 }

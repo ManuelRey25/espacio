@@ -1,5 +1,3 @@
-// script.js
-
 function toggleSkills() {
     var skills = document.getElementsByClassName("cover-letter");
     for (var i = 0; i < skills.length; i++) {

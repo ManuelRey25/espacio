@@ -1,14 +1,14 @@
 const weatherForm = document.getElementById('weatherForm');
 const cityInput = document.getElementById('cityInput');
 const weatherData = document.getElementById('weatherData');
-const apiKey = '7133013f1726303beb9dbf2103d3db3b'; // Clave de API proporcionada por OpenWeatherMap
+const apiKey = '7133013f1726303beb9dbf2103d3db3b'; 
 
 weatherForm.addEventListener('submit', function (e) {
     e.preventDefault();
 
     const cityName = cityInput.value;
 
-    // Realizar una solicitud GET a la API de OpenWeatherMap
+    
     fetch(`https://api.openweathermap.org/data/2.5/weather?q=${cityName}&APPID=${apiKey}&units=metric`)
         .then(response => response.json())
         .then(data => {

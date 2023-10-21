@@ -1,12 +1,8 @@
-// URL de la API de SpaceX para obtener datos de lanzamientos
 var apiUrl = 'https://api.spacexdata.com/v4/launches';
-
-// Obtener una referencia a la lista y al botón en el HTML
 var listaLanzamientos = document.getElementById("listaLanzamientos");
 var toggleButton = document.getElementById("toggleButton");
 var listaVisible = false;
 
-// Función para mostrar u ocultar la lista de lanzamientos
 function toggleLista() {
     if (listaVisible) {
         listaLanzamientos.style.display = "none";
@@ -19,16 +15,15 @@ function toggleLista() {
     }
 }
 
-// Agregar un evento click al botón para alternar la visibilidad de la lista
+
 toggleButton.addEventListener("click", toggleLista);
 
-// Realizar una solicitud GET a la API de SpaceX
 fetch(apiUrl)
     .then(function(response) {
         return response.json();
     })
     .then(function(data) {
-        // Procesar los datos de los lanzamientos y mostrarlos en la lista
+    
         data.forEach(function(launch) {
             var listItem = document.createElement("li");
             listItem.classList.add("texto-blanco"); // Agregar la clase CSS
